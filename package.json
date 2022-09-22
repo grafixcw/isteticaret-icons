@@ -1,0 +1,23 @@
+{
+  "name": "isteticaret-icons",
+  "version": "1.0.0",
+  "description": "İşteTicaret Icons",
+  "author": "Tanju Yildiz <ben@tanjuyildiz.com>",
+  "license": "MIT",
+  "keywords": [
+    "html",
+    "css",
+    "sass",
+    "scss",
+    "iconfont",
+    "fantasticon"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grafixcw/isteticaret-icons.git"
+  },
+  "homepage": "https://github.com/grafixcw/isteticaret-icons",
+  "bugs": {
+    "url": "https://github.com/grafixcw/isteticaret-icons/issues"
+  }
+}
