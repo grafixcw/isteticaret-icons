@@ -1,6 +1,6 @@
 module.exports = {
   inputDir: "./icons",
-  outputDir: "./public",
+  outputDir: "./docs",
   fontTypes: ["woff2", "woff"],
   assetTypes: ["css", "json", "html", "scss"],
   name: "isteticaret",
@@ -18,11 +18,11 @@ module.exports = {
     scss: "./templates/scss.hbs",
   },
   pathOptions: {
-    css: "./public/css/isteticaret-icons.css",
-    html: "./public/index.html",
-    json: "./public/isteticaret-icons.json",
-    scss: "./public/scss/isteticaret-icons.scss",
-    woff: "./public/fonts/isteticaret.woff",
-    woff2: "./public/fonts/isteticaret.woff2",
+    css: "./docs/css/isteticaret-icons.css",
+    html: "./docs/index.html",
+    json: "./docs/isteticaret-icons.json",
+    scss: "./docs/scss/isteticaret-icons.scss",
+    woff: "./docs/fonts/isteticaret.woff",
+    woff2: "./docs/fonts/isteticaret.woff2",
   },
 };
