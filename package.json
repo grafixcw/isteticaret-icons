@@ -12,6 +12,13 @@
     "iconfont",
     "fantasticon"
   ],
+  "main": "index.js",
+  "scripts": {
+    "build": "fantasticon",
+    "archive": "node index.js",
+    "version": "npm run archive",
+    "postversion": "git push origin main && git push origin --tags main"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/grafixcw/isteticaret-icons.git"
