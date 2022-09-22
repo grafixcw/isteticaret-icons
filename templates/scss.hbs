@@ -1,0 +1,32 @@
+$iconfont-name: {{{ name }}} !default;
+$iconfont-src: {{{ fontSrc }}} !default;
+
+// Font Path
+@font-face {
+  font-family: $iconfont-name;
+  src: $iconfont-src;
+}
+
+// Core Styles
+.{{prefix}}::before,
+[class^="{{prefix}}-"]::before,
+[class*=" {{prefix}}-"]::before {
+  display: inline-block;
+  font-family: $iconfont-name !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  font-variant: normal;
+  line-height: 1;
+  text-transform: none;
+  vertical-align: -.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Variables
+{{# each codepoints }}$icon-var-{{ @key }}: "\\{{ codepoint this }}" !default;
+{{/ each }}
+
+// Icons
+{{# each codepoints }}.{{ ../prefix }}-{{ @key }}::before { content: $icon-var-{{ @key }}; }
+{{/ each }}

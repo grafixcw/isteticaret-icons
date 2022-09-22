@@ -1,0 +1,30 @@
+:root {
+  --it-font-name: {{{ name }}};
+  --it-font-source: {{{ fontSrc }}};
+  {{# each codepoints }}--it-{{ @key }}: "\\{{ codepoint this }}";
+  {{/ each }}
+}
+
+@font-face {
+  font-family: "{{ name }}";
+  src: {{{ fontSrc }}};
+}
+
+.{{prefix}}::before,
+[class^="{{prefix}}-"]::before,
+[class*=" {{prefix}}-"]::before {
+  display: inline-block;
+  font-family: {{ name }} !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  font-variant: normal;
+  line-height: 1;
+  text-transform: none;
+  vertical-align: -.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+{{# each codepoints }}
+.{{ ../prefix }}-{{ @key }}::before { content: var(--it-{{ @key }}); }
+{{/ each }}
