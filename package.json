@@ -19,5 +19,9 @@
   "homepage": "https://github.com/grafixcw/isteticaret-icons",
   "bugs": {
     "url": "https://github.com/grafixcw/isteticaret-icons/issues"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.9",
+    "fantasticon": "^1.2.3"
   }
 }
