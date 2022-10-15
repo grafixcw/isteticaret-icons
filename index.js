@@ -5,7 +5,7 @@ const pkg = require("./package.json");
 async function createZipArchive() {
   try {
     const zip = new AdmZip();
-    zip.addLocalFolder("./public");
+    zip.addLocalFolder("./docs");
     zip.writeZip(`${pkg.name}-${pkg.version}.zip`);
     console.log(`Created zip successfully.`);
   } catch (e) {
